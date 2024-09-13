@@ -33,8 +33,8 @@ La capa secundaria se encarga de almacenar los **datos completos**. En esta capa
 ```go
 // Estructura de la base de datos
 type DualMemoryDB struct {
-    Primary   map[string]Metadata   // Capa primaria (RAM)
-    Secondary map[string]string     // Capa secundaria (almacenamiento)
+    Primary   map[string]Metadata   // Capa primaria 
+    Secondary map[string]string     // Capa secundaria 
 }
 ```
 
