@@ -36,11 +36,9 @@ Al mantener los datos más críticos o frecuentemente solicitados en memoria, se
 - Plataformas de comercio electrónico que deben consultar el estado del inventario o datos del usuario rápidamente.
 - Juegos o servicios en tiempo real que dependen de consultas instantáneas a la base de datos.
 
-### 5. **Escalabilidad y Persistencia Segura**
+### 5. # Arquitectura Dual de la Base de Datos
 
-La arquitectura dual de la base de datos permite una **gran escalabilidad**, ya que los datos se pueden distribuir de manera eficiente entre la capa primaria y secundaria. A medida que crecen los volúmenes de datos, solo una parte se mantiene en RAM, mientras que el resto se persiste en disco, permitiendo al sistema manejar conjuntos de datos masivos sin comprometer la memoria disponible.
-
-Además, el uso de la capa secundaria garantiza que los datos completos estén **almacenados de manera persistente**, lo que significa que no se perderá información en caso de un fallo del sistema o un reinicio.
+La arquitectura dual de la base de datos facilita una alta escalabilidad al distribuir eficientemente los datos entre la capa primaria y la capa secundaria. A medida que el volumen de datos crece, solo una parte se mantiene en la RAM en la capa primaria, mientras que el resto se almacena en la capa secundaria. Esto permite al sistema gestionar conjuntos de datos grandes sin comprometer la memoria disponible.
 
 ### Conclusión
 
