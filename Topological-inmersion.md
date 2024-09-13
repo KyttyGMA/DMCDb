@@ -8,10 +8,12 @@ En matemáticas y topología, una **inmersión** se refiere a una función que m
 ### Espacios de Memoria Unidimensionales
 La memoria se puede considerar como un espacio unidimensional debido a la forma en que se organiza en un solo eje. Cada ubicación en la memoria tiene una dirección única que puede ser vista como un punto en una línea.
 
-### Inmersión en Espacios Topológicos
-La inmersión implica transformar un espacio unidimensional (memoria) en una estructura más compleja. En nuestro caso, utilizamos esta idea para dividir los datos en dos capas:
-- **Capa Primaria (RAM)**: Almacenamos metadatos que representan una proyección o vista reducida de los datos completos.
-- **Capa Secundaria (Almacenamiento)**: Almacenamos los datos completos, que pueden ser recuperados cuando se necesiten.
+# Inmersión y Arquitectura de Memoria
+
+La inmersión implica transformar un espacio unidimensional (memoria) en una estructura más compleja. En nuestro enfoque, refinamos la arquitectura interna del valor almacenado en el mismo espacio de RAM, creando capas de memoria:
+
+- **Capa Primaria:** Utilizamos hashmaps para almacenar metadatos que representan una vista reducida de los datos completos.
+- **Capa Secundaria:** Los datos completos se almacenan en la misma RAM, pero en una capa lógica diferente, usando metadatos para permitir que la información proyectada en la capa primaria se muestre de manera completa.
 
 ## Implementación en DualMemoryDB
 
@@ -19,7 +21,7 @@ En DualMemoryDB, aplicamos el concepto de inmersión al dividir el almacenamient
 
 ### Ejemplo de Implementación
 Cuando un dato es insertado en la base de datos:
-1. Se genera una proyección (metadatos) para la capa primaria.
+1. Se genera una proyección (hashmap) para la capa primaria.
 2. El dato completo se almacena en la capa secundaria.
 3. La capa primaria actúa como una vista inmersa del dato completo, proporcionando acceso rápido a información clave.
 
