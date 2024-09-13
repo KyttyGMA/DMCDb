@@ -4,7 +4,7 @@
 
 ### Introducción
 
-El proyecto plantea la creación de una base de datos **contextual de memoria dual**, donde la capa primaria (almacenada en RAM) utiliza **hashmaps** para manejar los datos de forma rápida y eficiente. Este diseño ofrece varias ventajas en términos de rendimiento y escalabilidad, lo que lo convierte en una solución adecuada para entornos de alto rendimiento que requieren la capacidad de manejar grandes volúmenes de solicitudes rápidamente.
+El proyecto plantea la creación de una base de datos **contextual de memoria dual**, donde la capa primaria utiliza **hashmaps** para manejar los datos de forma rápida y eficiente. Este diseño ofrece varias ventajas en términos de rendimiento y escalabilidad, lo que lo convierte en una solución adecuada para entornos de alto rendimiento que requieren la capacidad de manejar grandes volúmenes de solicitudes rápidamente.
 
 ### 1. **Acceso a Datos en Tiempo Constante O(1)**
 
