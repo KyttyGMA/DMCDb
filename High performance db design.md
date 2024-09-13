@@ -16,9 +16,9 @@ El **hashmap** permite que cada dato esté asociado a una **clave única** que a
 
 La base de datos se estructura en dos capas:
 
-- **Capa Primaria (RAM)**: Aquí se almacenan versiones simplificadas o resumidas de los datos para responder rápidamente a solicitudes de acceso. Los datos en esta capa se gestionan con un **hashmap** que asegura un acceso veloz.
+- **Capa Primaria **: Aquí se almacenan versiones simplificadas o resumidas de los datos para responder rápidamente a solicitudes de acceso. Los datos en esta capa se gestionan con un **hashmap** que asegura un acceso veloz.
   
-- **Capa Secundaria (Disco)**: Esta capa contiene los datos completos, almacenados de forma persistente en archivos o bloques de disco. El acceso a estos datos es más lento, pero asegura que la base de datos pueda almacenar grandes volúmenes de información sin perder detalles.
+- **Capa Secundaria **: Esta capa contiene los datos completos, almacenados de forma persistente en archivos o bloques de disco. El acceso a estos datos es más lento, pero asegura que la base de datos pueda almacenar grandes volúmenes de información sin perder detalles.
 
 Este enfoque segmentado permite optimizar el acceso a los datos en función del contexto. Si una solicitud requiere sólo un acceso **superficial** (p. ej., un resumen de los datos), la capa primaria proporciona una respuesta rápida. Si se necesita más detalle, los datos se recuperan de la capa secundaria.
 
