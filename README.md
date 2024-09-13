@@ -16,7 +16,3 @@ The **Dual Memory Contextual Database (DMCDB)** project is an experimental in-me
 - **In-Memory Storage**: Utilizes Go's built-in data structures for primary and secondary memory.
 - **Access Algorithms**: Topological space folding algorithm for contextual access.
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/dmcdb.git
