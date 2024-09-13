@@ -1,20 +1,20 @@
 # Dual Memory Contextual Database (DMCDB)
 
-## Descripción
-El proyecto **Dual Memory Contextual Database (DMCDB)** es una base de datos experimental diseñada para optimizar el acceso a datos mediante una estructura de memoria primaria y secundaria. Utiliza un enfoque innovador basado en un **espacio topológico unidimensional** que se pliega sobre sí mismo, permitiendo acceder a diferentes "capas" de los datos según el contexto de la solicitud.
+## Description
+The **Dual Memory Contextual Database (DMCDB)** project is an experimental database designed to optimize data access through a primary and secondary memory structure. It uses an innovative approach based on a **one-dimensional topological space** that folds onto itself, allowing access to different "layers" of data according to the context of the request.
 
-## Características Principales
-- **Memoria Dual**: Los datos se almacenan en dos niveles de memoria, primaria (RAM) y secundaria (disco).
-- **Acceso Contextual**: Según el tipo de consulta, se accede a diferentes capas de información.
-- **Optimización de Recursos**: Al plegar el espacio de datos, se minimiza el uso de memoria primaria y se optimiza el acceso a la información relevante.
-- **Sistema de Caché**: Datos frecuentemente consultados son almacenados en memoria primaria para acceso rápido.
+## Key Features
+- **Dual Memory**: Data is stored in two levels of memory, primary (RAM) and secondary (disk).
+- **Contextual Access**: Depending on the type of query, different layers of information are accessed.
+- **Resource Optimization**: By folding the data space, the use of primary memory is minimized and access to relevant information is optimized.
+- **Caching System**: Frequently queried data is stored in primary memory for fast access.
 
-## Tecnologías Utilizadas
-- **Lenguaje**: Go (o el lenguaje que prefieras)
-- **Sistema de Almacenamiento**: Redis para memoria primaria y Cassandra para almacenamiento persistente (opcional).
-- **Algoritmos de Acceso**: Algoritmo de plegado de espacio topológico para el acceso contextual.
+## Technologies Used
+- **Language**: Go (or the language of your choice)
+- **Storage System**: Redis for primary memory and Cassandra for persistent storage (optional).
+- **Access Algorithms**: Topological space folding algorithm for contextual access.
 
-## Instalación
-1. Clona el repositorio:
+## Installation
+1. Clone the repository:
    ```bash
-   git clone https://github.com/tu-usuario/dmcdb.git
+   git clone https://github.com/your-username/dmcdb.git
