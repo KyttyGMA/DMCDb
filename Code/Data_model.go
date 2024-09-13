@@ -1,21 +1,15 @@
 package main
 
-import "time"
-
-// Estructura para los metadatos
-type Metadata struct {
-	ID         string
-	Size       int
-	CreatedAt  time.Time
-	ModifiedAt time.Time
-	Hash       string
-	Tags       []string
-}
+import (
+	"sync"
+	"time"
+)
 
 // Estructura de la base de datos
 type DualMemoryDB struct {
-	Primary   map[string]Metadata // Capa primaria (RAM)
-	Secondary map[string]string    // Capa secundaria (almacenamiento)
+	Primary   map[string]Metadata
+	Secondary map[string]string
+	mu        sync.Mutex // Mutex para proteger el acceso concurrente
 }
 
 // Constructor para la base de datos
