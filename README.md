@@ -20,14 +20,15 @@ The **Dual Memory Contextual Database (DMCDB)** project is an experimental in-me
 
 ### Primary Layer
 - **Data Structure**: Uses hashmaps to store metadata, which includes:
-  - **ID**: Unique identifier of the data.
+  - 
+
+### Secondary Layer
+- **Data Structure**: Stores complete data with optional persistence. This layer uses metadata to organize and access the data. The persistence of data in this layer can be configured based on the requirements.
+- **ID**: Unique identifier of the data.
   - **Size**: Size of the complete data.
   - **Creation/Modification Date**: Timestamps for the data.
   - **Hash**: Hash for data integrity validation.
   - **Tags**: Associated categories or labels.
-
-### Secondary Layer
-- **Data Structure**: Stores complete data with optional persistence. This layer uses metadata to organize and access the data. The persistence of data in this layer can be configured based on the requirements.
 
 ## Advantages
 - **Fast Access**: Metadata in the primary layer allows for rapid queries without needing to load the full data.
