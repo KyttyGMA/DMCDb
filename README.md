@@ -19,7 +19,7 @@ The **Dual Memory Contextual Database (DMCDB)** project is an experimental in-me
 ## Data Model
 
 ### Primary Layer
-- **Data Structure**: Uses hashmaps to store metadata, which includes:
+- **Data Structure**: Uses hashmaps to store metadata representation
   - 
 
 ### Secondary Layer
